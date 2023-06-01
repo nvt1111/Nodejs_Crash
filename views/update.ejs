@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update | <%= title %> </title>
+</head>
+<body>
+  <div class="create-blog content">
+    <form class="a" action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
+      <!-- khi nhấn sub thì nó chạy sang link blogs và gọi api put /blogs -->
+      <label for="title">Blog title:</label>
+      <input type="text" id="title" name="title" value="<%= blog.title %>">
+      <label for="snippet">Blog snippet:</label>
+      <input type="text" id="snippet" name="snippet" value="<%= blog.snippet %>">
+      <label for="body">Blog body:</label>
+      <textarea id="body" name="body"><%= blog.body %></textarea>
+      <!-- <button type="button" onclick="updateBlog()">Update</button> -->
+      <button>Update</button>
+    </form>
+  </div>
+  
+</body>
+</html>
